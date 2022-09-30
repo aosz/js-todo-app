@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ToDo App</title>
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
+    </head>
+    <body>
+        <div class="uk-width-1-1 uk-width-1-2@m uk-align-center uk-background-muted">
+            <div class="">
+                <div class="uk-padding">
+                    <h1 class="uk-heading-divider">
+                        &#128466; To Do List App <span class="uk-badge" id="task-count"></span>
+                    </h1>
+                    <form class="uk-flex">
+                        <input class="uk-input" name="text" id="text" placeholder="Add New Task" required />
+                        <input class="uk-input" type="hidden" id="saveIndex" required />
+                        <button class="uk-button uk-button-secondary" id="add-task-button">Add</button>
+                        <button class="uk-button uk-button-primary" style="display: none" id="save-task-button">
+                            Save
+                        </button>
+                    </form>
+                </div>
+                <!-- Task List Section -->
+                <div class="uk-padding uk-padding-remove-top" uk-sortable="handle: .uk-card" id="listBox">
+                    <div uk-spinner></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="./js/app.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+</html>
